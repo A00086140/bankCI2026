@@ -3,6 +3,17 @@ name: build and package
 on:
   workflow_dispatch:                                # manually triggered
 
+
+  push:
+    branches:
+      - test
+  pull_request:
+      branches:
+      - test
+
+
+
+
 jobs:
   build_package:
 
@@ -30,8 +41,8 @@ jobs:
       uses: SonarSource/sonarqube-scan-action@v8.1.0
       with:
         args: >
-          -Dsonar.organization=gclynch
-          -Dsonar.projectKey=gclynch_bankCI2026
+          -Dsonar.organization=a00086140
+          -Dsonar.projectKey=A00086140_bankCI2026
           -Dsonar.python.coverage.reportPaths=coverage.xml
           -Dsonar.verbose=true
       env:
