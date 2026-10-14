@@ -3,14 +3,13 @@ name: build and package
 on:
   workflow_dispatch:                                # manually triggered
 
-
-  push:
-    branches:
-      - test
-  pull_request:
-      branches:
-      - test
-
+#  push:
+#    branches:
+   #      - test
+   #  pull_request:
+   #      branches:
+   #      - test
+#
 
 
 
